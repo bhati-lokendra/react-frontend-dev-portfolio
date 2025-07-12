@@ -1,19 +1,15 @@
 import React, { Component } from "react";
 import { Icon } from "@iconify/react";
-import angularIcon from "@iconify/icons-logos/angular-icon";
 import reactIcon from "@iconify/icons-logos/react";
-import vueIcon from "@iconify/icons-logos/vue";
+import nextjsIcon from "@iconify/icons-logos/nextjs";
+import typescriptIcon from "@iconify/icons-logos/typescript-icon";
 
 class About extends Component {
   render() {
-    if (this.props.sharedBasicInfo) {
-      var profilepic = "images/" + this.props.sharedBasicInfo.image;
-    }
-    if (this.props.resumeBasicInfo) {
-      var sectionName = this.props.resumeBasicInfo.section_name.about;
-      var hello = this.props.resumeBasicInfo.description_header;
-      var about = this.props.resumeBasicInfo.description;
-    }
+    const profilepic = "images/myProfile.jpeg"; // Using your profile image
+    const sectionName = "About Me";
+    const hello = "Hello, I'm Lokendra Singh";
+    const about = "💻 4+ years of crafting exceptional web applications with React, Next.js & TypeScript. 🚀 Currently at Deloitte building scalable government solutions that serve thousands daily. ⚡ Expert in performance optimization - achieved 40% faster loading times and 30% crash reduction. 🎯 Passionate about creating reusable components and mentoring teams to build better software.";
 
     return (
       <section id="about">
@@ -26,20 +22,20 @@ class About extends Component {
               <div className="polaroid">
                 <span style={{ cursor: "auto" }}>
                   <img
-                    height="250px"
+                    height="200px"
                     src={profilepic}
-                    alt="Avatar placeholder"
-                  />
-                  <Icon
-                    icon={angularIcon}
-                    style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
+                    alt="Lokendra Singh - Frontend Developer"
                   />
                   <Icon
                     icon={reactIcon}
                     style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
                   />
                   <Icon
-                    icon={vueIcon}
+                    icon={nextjsIcon}
+                    style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
+                  />
+                  <Icon
+                    icon={typescriptIcon}
                     style={{ fontSize: "400%", margin: "9% 5% 0 5%" }}
                   />
                 </span>

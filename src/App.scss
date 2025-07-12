@@ -426,3 +426,53 @@ footer a:focus {
 	margin-top: 50px;
 	font-size: 22px;
 }
+
+/* Add this to your App.scss file to override the dark skills background */
+
+#skills {
+	background: #fff !important; /* Changed from #1F1F1F to white */
+	min-height: 200px;
+	width: 100%;
+	overflow: hidden;
+	padding-bottom: 10%;
+}
+
+.section-title {
+	padding-top: 5%;
+	padding-bottom: 5%;
+	font: 18px/24px 'opensans-bold', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: #000 !important; /* Changed from #fff to black */
+	text-align: center;
+}
+
+.skill-icon {
+	font-size: 180%;
+	color: #000 !important; /* Changed from white to black */
+	text-align: center;
+	position: relative;
+}
+
+/* Ensure all skills text is black on white background */
+#skills h1,
+#skills h2,
+#skills h3,
+#skills h4,
+#skills h5,
+#skills h6,
+#skills p,
+#skills span {
+	color: #000 !important;
+}
+
+/* Ensure consistent background for the entire skills section */
+#skills .card {
+	background: #fff !important;
+	border: 1px solid #dee2e6 !important;
+}
+
+#skills .card-header {
+	background-color: #f8f9fa !important;
+	border-bottom: 1px solid #dee2e6 !important;
+}

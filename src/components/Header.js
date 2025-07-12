@@ -25,10 +25,9 @@ class Header extends Component {
   }
 
   render() {
-    if (this.props.sharedData) {
-      var name = this.props.sharedData.name;
-      this.titles = this.props.sharedData.titles.map(x => [ x.toUpperCase(), 1500 ] ).flat();
-    }
+    const name = "Lokendra Singh";
+    const titles = ["Frontend Developer", "React Specialist", "Next.js Expert", "TypeScript Developer"];
+    this.titles = titles.map(x => [ x.toUpperCase(), 1500 ] ).flat();
 
     const HeaderTitleTypeAnimation = React.memo( () => {
       return <Typical className="title-styles" steps={this.titles} loop={50} />
@@ -39,7 +38,6 @@ class Header extends Component {
         <div className="row aligner" style={{height: '100%'}}>
           <div className="col-md-12">
             <div>
-              <span className="iconify header-icon" data-icon="la:laptop-code" data-inline="false"></span>
               <br/>
               <h1 className="mb-0">
                 <Typical steps={[name]} wrapper="p" />

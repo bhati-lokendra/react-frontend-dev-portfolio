@@ -2,17 +2,38 @@ import React, { Component } from "react";
 
 class Footer extends Component {
   render() {
-    if (this.props.sharedBasicInfo) {
-      var networks = this.props.sharedBasicInfo.social.map(function (network) {
-        return (
-          <span key={network.name} className="m-4">
-            <a href={network.url} target="_blank" rel="noopener noreferrer">
-              <i className={network.class}></i>
-            </a>
-          </span>
-        );
-      });
-    }
+    const socialNetworks = [
+      {
+        name: "github",
+        url: "https://github.com/lokendrasingh",
+        class: "fab fa-github"
+      },
+      {
+        name: "instagram", 
+        url: "https://www.instagram.com/lokendrasingh",
+        class: "fab fa-instagram"
+      },
+      {
+        name: "linkedin",
+        url: "https://www.linkedin.com/in/lokendra-singh7014153967/",
+        class: "fab fa-linkedin"
+      },
+      {
+        name: "email",
+        url: "mailto:lokendrasinghb11@gmail.com",
+        class: "fas fa-envelope"
+      }
+    ];
+
+    const networks = socialNetworks.map(function (network) {
+      return (
+        <span key={network.name} className="m-4">
+          <a href={network.url} target="_blank" rel="noopener noreferrer">
+            <i className={network.class}></i>
+          </a>
+        </span>
+      );
+    });
 
     return (
       <footer>
@@ -22,10 +43,7 @@ class Footer extends Component {
           <div className="copyright py-4 text-center">
             <div className="container">
               <small>
-                Copyright &copy;{" "}
-                {this.props.sharedBasicInfo
-                  ? this.props.sharedBasicInfo.name
-                  : "???"}
+                Copyright &copy; Lokendra Singh
               </small>
             </div>
           </div>
